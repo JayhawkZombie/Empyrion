@@ -28,23 +28,6 @@ namespace emp
     }
   }
 
-
-  template<typename TimeType>
-  Duration operator+=(const Duration &dur, const TimeType &Tme)
-  {
-    if constexpr ( std::is_same_v<TimeType, milliseconds_double> )
-    {
-      Duration d;
-      d.m_DurationTime = dur.m_DurationTime + Tme;
-      return d;
-
-    } else {
-      Duration d;
-      d.m_DurationTime = dur.m_DurationTime + std::chrono::duration_cast< milliseconds_double >( Tme );
-      return d;
-    }
-  }
-
   template<typename TimeType>
   Duration::Duration(const TimeType &TType)
   {

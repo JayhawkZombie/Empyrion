@@ -72,8 +72,8 @@ namespace emp
       auto diff = pos - P.Position;
       auto dist = hypotf(diff.x, diff.y);
 
-      if (dist >= cutoff)
-        return;
+ /*     if (dist >= cutoff)
+        return;*/
 
       dist /= 100.f;
 

@@ -39,9 +39,6 @@ namespace emp
     template<typename TimeType = microseconds>
     friend Duration operator*=(const Duration &dur, const TimeType &Tme);
 
-    template<typename TimeType = microseconds>
-    friend Duration operator+=(const Duration &dur, const TimeType &Tme);
-
     bool operator >= (const Duration &dur2);
     bool operator > (const Duration &dur2);
     bool operator <= (const Duration &dur2);
